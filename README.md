@@ -16,7 +16,16 @@ A decentralised ledger system is a system where the ledger is not maintained by 
 
 ## How does it work?
 
-The ledger is maintained by a group of people called <b>nodes</b>. Each node has a copy of the ledger. And each node has the power to add a transaction to the ledger. And each node has the power to validate a transaction.
+The ledger is maintained by a group of people called <b>nodes</b> <i>(here, wallets).</i> Each wallet has a copy of the ledger. And each wallet has the power to add a transaction to the ledger. And each wallet has the power to validate a transaction.
+
+### The Flow:
+![The Flow Diagram](<public/Flow of program.jpg>)
+
+## What is the signature?
+
+To validate a transaction, each person that is sending has to sign the transaction. The signature is made by the `private key` of the sending wallet. And the signature is verified by the `public key` of the other wallets.
+
+![Signature Flow](<public/Signature Flow.jpg>)
 
 ## What is the advantage?
 
