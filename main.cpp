@@ -37,9 +37,29 @@ int main() {
 
         switch (choice) {
             case 1: {
+                bool nameExists;
                 wallets[walletCounter] = Wallet(0);
-                cout << "Enter the name of the wallet:" << endl;
-                cin >> wallets[walletCounter].name;
+
+                string walletName;
+                cout << "Enter the name of the wallet:";
+                cin >> walletName;
+
+                while (true) {
+                    nameExists = false;
+                    for (int i = 0; i < Wallet::walletCounter; i++) {
+                        if (wallets[i].name == walletName) {
+                            nameExists = true;
+                            cout << "😕 Wallet name already exists. Please enter a different name: ";
+                            cin >> walletName;
+                            break;
+                        }
+                    }
+                    if (!nameExists) {
+                        break;
+                    }
+                }
+                wallets[walletCounter].name = walletName;
+
                 cout << "🤫 Enter a password for the wallet number " << walletCounter + 1<< " : ";
                 do {
                     cin >> password;

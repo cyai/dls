@@ -1,6 +1,6 @@
 #!/bin/bash
 
-g++ -std=c++11 -o output_file dls.cpp
+g++ -std=c++11 -o output_file main.cpp
 
 if [ $? -eq 0 ]; then
     echo "Compilation successful. Running the program..."
