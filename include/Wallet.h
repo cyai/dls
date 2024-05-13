@@ -26,6 +26,8 @@ public:
     //     walletCounter++;
     // }
 
+    Wallet(int);
+
 
     string getPassword() const;
     // string getPassword() const {

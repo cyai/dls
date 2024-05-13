@@ -37,7 +37,7 @@ int main() {
 
         switch (choice) {
             case 1: {
-                wallets[walletCounter] = Wallet();
+                wallets[walletCounter] = Wallet(0);
                 cout << "Enter the name of the wallet:" << endl;
                 cin >> wallets[walletCounter].name;
                 cout << "🤫 Enter a password for the wallet number " << walletCounter + 1<< " : ";
