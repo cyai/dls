@@ -59,6 +59,7 @@ We implemented a decentralised ledger system using <b>blockchain</b>. A blockcha
 3. Follow the instructions on the terminal
 4. Enjoy ☺️
 
+> Note: You need to have `c++11` compiler installed on your system to run the code. Compile it using: `g++ -std=c++11 main.cpp`
 ## Contributors
 
 -   Aarav Singh Luthra
