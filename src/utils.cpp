@@ -55,6 +55,11 @@ Ledger send(string recipientPublicKey, string senderPublicKey, double amount,
     cout << "Amout to be sent: " << amount << endl;
     string transacSignature =
         senderWallet->createTransaction(amount, recipientPublicKey, wallets);
+
+    if (transacSignature == "") {
+        cout << "Transaction failed." << endl;
+        return Ledger();
+    }
     cout << "Transaction Signature: " << transacSignature << endl;
 
     for (int i = 0; i < Wallet::walletCounter; i++) {
