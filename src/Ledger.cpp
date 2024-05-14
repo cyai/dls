@@ -84,4 +84,3 @@ void Ledger::filterTransactionsByTo(string toPublicKey) {
         current = current->prev;
     }
 }
-

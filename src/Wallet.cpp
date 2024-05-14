@@ -1,7 +1,7 @@
 #include "DLS.cpp"
 
-Wallet::Wallet(){}
-Wallet::Wallet(int _ ) {
+Wallet::Wallet() {}
+Wallet::Wallet(int _) {
     privateKey = DLS::generatePrivateKey();
     publicKey = DLS::generatePublicKey(privateKey);
     walletCounter++;

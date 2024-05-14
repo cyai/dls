@@ -1,17 +1,17 @@
-#include "DLS.h"
-
 #include <iostream>
-#include <string>
 #include <map>
+#include <string>
+
+#include "DLS.h"
 
 using namespace std;
 
 class Wallet {
-    private:
-        string privateKey;
-        string password;
+   private:
+    string privateKey;
+    string password;
 
-public:
+   public:
     string name;
     string publicKey;
     double balance;
@@ -28,7 +28,6 @@ public:
 
     Wallet(int);
 
-
     string getPassword() const;
     // string getPassword() const {
     //     return password;
@@ -44,36 +43,44 @@ public:
     //     password = pass;
     // }
 
-    string createTransaction(double amount, string recipientPublicKey, Wallet wallets[]);
-    // string createTransaction(double amount, string recipientPublicKey, Wallet wallets[]) {
+    string createTransaction(double amount, string recipientPublicKey,
+                             Wallet wallets[]);
+    // string createTransaction(double amount, string recipientPublicKey, Wallet
+    // wallets[]) {
     //     cout<<"Creating transaction..."<<endl;
     //     cout<<"Amount to be sent: "<<amount<<endl;
     //     if (amount <= 0 || amount > balance) {
-    //         cout << "Invalid transaction amount. Amount must be greater than 0 and less than or equal to balance." << endl;
-    //         return "";
+    //         cout << "Invalid transaction amount. Amount must be greater than
+    //         0 and less than or equal to balance." << endl; return "";
     //     }
 
     //     int transactionId = ++transactionCounter;
-    //     string data = to_string(transactionId) + publicKey + recipientPublicKey + to_string(amount);
-    //     string signature = DLS::createSignature(privateKey, data);
-    //     string newHash = DLS::generateHash(getLastTransactionGraph()["Final Hash"], transactionId, publicKey, recipientPublicKey, amount, signature);
-    //     ledger.addTransaction(getLastTransactionGraph()["Final Hash"], transactionId, publicKey, recipientPublicKey, amount, signature, newHash);
-    //     balance -= amount;
-    //     for(int i=0; i<walletCounter; i++){
+    //     string data = to_string(transactionId) + publicKey +
+    //     recipientPublicKey + to_string(amount); string signature =
+    //     DLS::createSignature(privateKey, data); string newHash =
+    //     DLS::generateHash(getLastTransactionGraph()["Final Hash"],
+    //     transactionId, publicKey, recipientPublicKey, amount, signature);
+    //     ledger.addTransaction(getLastTransactionGraph()["Final Hash"],
+    //     transactionId, publicKey, recipientPublicKey, amount, signature,
+    //     newHash); balance -= amount; for(int i=0; i<walletCounter; i++){
     //         if(wallets[i].publicKey==recipientPublicKey){
     //             wallets[i].balance+=amount;
     //         }
     //     }
-    //     cout << amount << " sucessfully send to " << recipientPublicKey << ". New balance: " << balance << endl;
-    //     return signature;
+    //     cout << amount << " sucessfully send to " << recipientPublicKey << ".
+    //     New balance: " << balance << endl; return signature;
     // }
 
-    void addToLedger(string fromPublicKey, string toPublicKey, double amount, string sign);
-    // void addToLedger(string fromPublicKey, string toPublicKey, double amount, string sign) {
+    void addToLedger(string fromPublicKey, string toPublicKey, double amount,
+                     string sign);
+    // void addToLedger(string fromPublicKey, string toPublicKey, double amount,
+    // string sign) {
     //     map<string, string> prevTrans = getLastTransactionGraph();
     //     int transactionId = ++transactionCounter;
-    //     string newHash = DLS::generateHash(prevTrans["Final Hash"], transactionId, fromPublicKey, toPublicKey, amount, sign);
-    //     ledger.addTransaction(prevTrans["Final Hash"], transactionId, fromPublicKey, toPublicKey, amount, sign, newHash);
+    //     string newHash = DLS::generateHash(prevTrans["Final Hash"],
+    //     transactionId, fromPublicKey, toPublicKey, amount, sign);
+    //     ledger.addTransaction(prevTrans["Final Hash"], transactionId,
+    //     fromPublicKey, toPublicKey, amount, sign, newHash);
     // }
 
     map<string, string> getLastTransactionGraph();
@@ -82,14 +89,15 @@ public:
     //     Node* lastTransaction = ledger.getLatestTransaction();
     //     if (lastTransaction) {
     //         transactionGraph["Prev Hash"] = lastTransaction->previousHash;
-    //         transactionGraph["Transaction ID"] = to_string(lastTransaction->transactionId);
-    //         transactionGraph["From Public Key"] = lastTransaction->_fromPublicKey;
-    //         transactionGraph["To Public Key"] = lastTransaction->toPublickKey;
-    //         transactionGraph["Amount"] = to_string(lastTransaction->amount);
-    //         transactionGraph["Signature"] = lastTransaction->signature;
-    //         transactionGraph["Final Hash"] = lastTransaction->finalHash;
+    //         transactionGraph["Transaction ID"] =
+    //         to_string(lastTransaction->transactionId); transactionGraph["From
+    //         Public Key"] = lastTransaction->_fromPublicKey;
+    //         transactionGraph["To Public Key"] =
+    //         lastTransaction->toPublickKey; transactionGraph["Amount"] =
+    //         to_string(lastTransaction->amount); transactionGraph["Signature"]
+    //         = lastTransaction->signature; transactionGraph["Final Hash"] =
+    //         lastTransaction->finalHash;
     //     }
     //     return transactionGraph;
     // }
-
 };
