@@ -70,7 +70,6 @@ bool DLS::verifySignature(const string& publicKey, const string& signature,
     string expectedSignature = createSignature(deducedPrivateKey, data);
     return expectedSignature == signature;
 }
-
 string DLS::deducePrivateKey(const string& publicKey) {
     string privateKey = "";
     string reversedPublicKey = publicKey;
