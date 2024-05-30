@@ -2,7 +2,7 @@
 
 ## Introduction
 
-We hang out a lot. And we spend a lot. And sometimes we loose track of <i>who ows how much to whom </i> .
+We hang out a lot. And we spend a lot. And sometimes we loose track of <i>who ows how much to whom </i>.
 
 So we allot one person the power of handelling a ledger. And we trust him to keep track of all the transactions. But what if he makes a mistake? Or what if he is not honest? Or what if he is not available?
 
